@@ -70,6 +70,8 @@ if USE_CLOUDINARY:
 else:
     DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STORAGES = {
     "default": {
         "BACKEND": DEFAULT_FILE_STORAGE,
